@@ -2391,8 +2391,10 @@ MonoBehaviour:
   keyboardBasePrefab: {fileID: 449604476}
   backgroundPrefab: {fileID: 0}
   specialBackgroundPrefab: {fileID: 1741465108}
-  keySpacing: 0.024
+  keySpacing: 0.021
   rowSpacing: 0.024
+  customSpacing1: 1.1
+  customSpacing2: 1.38
   specialKeySize: {x: 3, y: 1}
 --- !u!65 &1221009238
 BoxCollider:
@@ -3667,8 +3669,10 @@ MonoBehaviour:
   keyboardBasePrefab: {fileID: 290932793}
   backgroundPrefab: {fileID: 1767738705}
   specialBackgroundPrefab: {fileID: 599841938}
-  keySpacing: 0.04
+  keySpacing: 0.035
   rowSpacing: 0.04
+  customSpacing1: 1.4
+  customSpacing2: 1.35
   specialKeySize: {x: 3, y: 1}
 --- !u!65 &1669330793
 BoxCollider:
@@ -4303,7 +4307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3448816213580346702, guid: 02f6cca369af54aac9391d6e05ab6028, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0096
+      value: 0.01344
       objectReference: {fileID: 0}
     - target: {fileID: 4313266490004905728, guid: 02f6cca369af54aac9391d6e05ab6028, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4820,7 +4824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3448816213580346702, guid: 02f6cca369af54aac9391d6e05ab6028, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.016
+      value: 0.0224
       objectReference: {fileID: 0}
     - target: {fileID: 4313266490004905728, guid: 02f6cca369af54aac9391d6e05ab6028, type: 3}
       propertyPath: m_Materials.Array.data[0]
