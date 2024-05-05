@@ -429,7 +429,7 @@ PlayerSettings:
   enableCrashReportAPI: 0
   cameraUsageDescription: Requires the camera device access.
   locationUsageDescription: 
-  microphoneUsageDescription: 
+  microphoneUsageDescription: this app needs access to Mic
   bluetoothUsageDescription: 
   switchNMETAOverride: 
   switchNetLibKey: 

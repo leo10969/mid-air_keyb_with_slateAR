@@ -75,6 +75,9 @@ namespace MediaPipe.HandPose
         private void SpaceGesture()
         {
             csvHandler.inputField.text += " ";
+            csvHandler.inputField.caretPosition = csvHandler.inputField.text.Length;
+            csvHandler.inputField.ActivateInputField(); // キャレットを表示させるためにInputFieldを再アクティブ化
+            csvHandler.SetHideSoftKeyboard(true);//ただし，キーボードは非表示
             csvHandler.SetTimeStamps();
         }
 
@@ -83,6 +86,9 @@ namespace MediaPipe.HandPose
             if (csvHandler.inputField.text.Length > 0)
             {
                 csvHandler.inputField.text = csvHandler.inputField.text.Remove(csvHandler.inputField.text.Length-1); // 最後の文字を削除
+                csvHandler.inputField.caretPosition = csvHandler.inputField.text.Length;
+                csvHandler.inputField.ActivateInputField(); // キャレットを表示させるためにInputFieldを再アクティブ化
+                csvHandler.SetHideSoftKeyboard(true);//ただし，キーボードは非表示
                 csvHandler.SetTimeStamps();
                 csvHandler.deleteCount++;
                 Debug.Log("Gesture Deleted! : " + csvHandler.deleteCount.ToString());

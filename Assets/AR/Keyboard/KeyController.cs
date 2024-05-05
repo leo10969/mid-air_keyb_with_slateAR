@@ -34,8 +34,7 @@ namespace MediaPipe.HandPose
             switch (this.gameObject.tag)
             {
                 case "Space":
-                    csvHandler.inputField.text += " ";
-                    csvHandler.SetTimeStamps();
+                    HandleSpace(csvHandler.inputField);
                     break;
                 case "Delete":
                     HandleDelete(csvHandler.inputField);
@@ -63,6 +62,15 @@ namespace MediaPipe.HandPose
             // Debug.Log("csvHandler.inputTextValue: " + csvHandler.inputTextValue);
         }
 
+        private void HandleSpace(TMP_InputField inputField)
+        {
+            inputField.text += " ";
+            inputField.caretPosition = csvHandler.inputField.text.Length;//キャレットを末尾に移動
+            inputField.ActivateInputField(); // キャレットを表示させるためにInputFieldを再アクティブ化
+            csvHandler.SetHideSoftKeyboard(true);//ただし，キーボードは非表示
+            csvHandler.SetTimeStamps();
+        }
+
         private void HandleDelete(TMP_InputField inputField)
         {
             if (inputField.text.Length > 0)
@@ -70,6 +78,9 @@ namespace MediaPipe.HandPose
                 csvHandler.deleteCount++;
                 Debug.Log("Deleted! : " + csvHandler.deleteCount.ToString());
                 inputField.text = inputField.text.Remove(inputField.text.Length - 1);
+                inputField.caretPosition = inputField.text.Length;//キャレットを末尾に移動
+                inputField.ActivateInputField(); // キャレットを表示させるためにInputFieldを再アクティブ化
+                csvHandler.SetHideSoftKeyboard(true);//ただし，キーボードは非表示
                 // Debug.Log("csvHandler.inputTextValue: " + csvHandler.inputTextValue);
                 csvHandler.SetTimeStamps();
             }
@@ -96,8 +107,12 @@ namespace MediaPipe.HandPose
                 Debug.Log("StartTyping!");
                 csvHandler.StartTyping();
             }
+            Debug.Log("caret is here: " + inputField.caretPosition.ToString());
             csvHandler.SetTimeStamps();
             inputField.text += this.gameObject.name.ToLower();
+            inputField.caretPosition = inputField.text.Length;//キャレットを末尾に移動
+            inputField.ActivateInputField(); // キャレットを表示させるためにInputFieldを再アクティブ化
+            csvHandler.SetHideSoftKeyboard(true);//ただし，キーボードは非表示
             // Debug.Log("inputField.text: " + inputField.text);
             // Debug.Log("csvHandler.inputTextValue: " + csvHandler.inputTextValue);
 

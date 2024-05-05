@@ -170,5 +170,12 @@ namespace MediaPipe.HandPose
             else isPractice = true;
             Debug.Log("isPractice: " + isPractice.ToString());
         }
+
+        // ソフトキーボードの表示を制御するための関数
+        public void SetHideSoftKeyboard(bool hide)
+        {
+            var inputFieldComponent = inputField.GetComponent<TMPro.TMP_InputField>();
+            inputFieldComponent.shouldHideSoftKeyboard = hide;
+        }
     }
 }

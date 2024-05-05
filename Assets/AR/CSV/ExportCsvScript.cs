@@ -45,7 +45,7 @@ namespace MediaPipe.HandPose
             }
         }
 
-        private void InitializeCSV()
+        public void InitializeCSV()
         {
             string path = GetPath();
             // Debug.Log("path:" + path);
@@ -63,7 +63,7 @@ namespace MediaPipe.HandPose
             AppendCSV(data, GetPath());
         }
 
-        private string GetPath()
+        public string GetPath()
         {
             // ファイル名に追加するサフィックスを初期化
             string filterSuffix = "";
