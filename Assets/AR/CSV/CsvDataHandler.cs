@@ -174,8 +174,8 @@ namespace MediaPipe.HandPose
         // ソフトキーボードの表示を制御するための関数
         public void SetHideSoftKeyboard(bool hide)
         {
-            var inputFieldComponent = inputField.GetComponent<TMPro.TMP_InputField>();
-            inputFieldComponent.shouldHideSoftKeyboard = hide;
+            // inputField.shouldHideSoftKeyboard = hide;
+            return;
         }
     }
 }

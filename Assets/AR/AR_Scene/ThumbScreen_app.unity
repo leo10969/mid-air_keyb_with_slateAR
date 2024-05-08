@@ -1535,7 +1535,7 @@ MonoBehaviour:
   m_KeyboardType: 0
   m_LineType: 0
   m_HideMobileInput: 1
-  m_HideSoftKeyboard: 1
+  m_HideSoftKeyboard: 0
   m_CharacterValidation: 0
   m_RegexValue: 
   m_GlobalPointSize: 14
@@ -2853,7 +2853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df89dff2e9c7f4f40bfd0810ee25dc61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deviceTrackingText: {fileID: 0}
+  deviceTrackingText: {fileID: 292903647}
   trackingButton: {fileID: 144245630}
   exportCsvScript: {fileID: 559890844}
 --- !u!4 &1225931667
@@ -3391,7 +3391,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 8, y: 0, z: 0, w: 0}
+  m_margin: {x: -80, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

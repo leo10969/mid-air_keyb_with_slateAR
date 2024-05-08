@@ -65,7 +65,7 @@ namespace MediaPipe.HandPose
         private void HandleSpace(TMP_InputField inputField)
         {
             inputField.text += " ";
-            inputField.caretPosition = csvHandler.inputField.text.Length;//キャレットを末尾に移動
+            inputField.caretPosition = inputField.text.Length;//キャレットを末尾に移動
             inputField.ActivateInputField(); // キャレットを表示させるためにInputFieldを再アクティブ化
             csvHandler.SetHideSoftKeyboard(true);//ただし，キーボードは非表示
             csvHandler.SetTimeStamps();
@@ -115,7 +115,6 @@ namespace MediaPipe.HandPose
             csvHandler.SetHideSoftKeyboard(true);//ただし，キーボードは非表示
             // Debug.Log("inputField.text: " + inputField.text);
             // Debug.Log("csvHandler.inputTextValue: " + csvHandler.inputTextValue);
-
         }
 
         public void OnTriggerExit(Collider other)
